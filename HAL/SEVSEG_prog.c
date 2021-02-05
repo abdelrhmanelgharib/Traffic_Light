@@ -470,7 +470,7 @@ if ( (seg_num == SEG1)  && (num_to_diplay==0))
     }
     else if ( (seg_num == SEG1)  && (num_to_diplay==7))
     {
-        #if(SEG_0_CONNECTION == COM_CATHODE)
+        #if(SEG_1_CONNECTION == COM_CATHODE)
         {
             DIO_voidSetPin(SEG1_a_PIN,HIGH);
             DIO_voidSetPin(SEG1_b_PIN,HIGH);
@@ -495,7 +495,7 @@ if ( (seg_num == SEG1)  && (num_to_diplay==0))
     }
     else if ( (seg_num == SEG1)  && (num_to_diplay==8))
     {
-        #if(SEG_1_CONNECTION == COM_CATHODE)
+        #if(SEG_1_CONNECTION == COM_ANODE)
         {
             DIO_voidSetPin(SEG1_a_PIN,HIGH);
             DIO_voidSetPin(SEG1_b_PIN,HIGH);
@@ -515,11 +515,12 @@ if ( (seg_num == SEG1)  && (num_to_diplay==0))
             DIO_voidSetPin(SEG1_e_PIN,LOW);
             DIO_voidSetPin(SEG1_f_PIN,LOW);
             DIO_voidSetPin(SEG1_g_PIN,LOW);
+        }
         #endif
     }
     else if ( (seg_num == SEG1)  && (num_to_diplay==9))
     {
-        #if(SEG_1_CONNECTION == COM_CATHODE)
+        #if(SEG_1_CONNECTION == COM_ANODE)
         {
             DIO_voidSetPin(SEG1_a_PIN,HIGH);
             DIO_voidSetPin(SEG1_b_PIN,HIGH);
@@ -552,7 +553,7 @@ void SEVSEG_voidEnable(u8 seg_num)
     switch (seg_num)
     {
     case SEG0:
-        #if (SEG_0_CONNECTION == COM_ANODE )
+        #if (SEG_0_CONNECTION == COM_CATHODE )
         {
             DIO_voidSetPin(SEG0_COM_PIN, HIGH);
         }
@@ -564,13 +565,13 @@ void SEVSEG_voidEnable(u8 seg_num)
         
         break;
     case SEG1:
-        #if (SEG_1_CONNECTION == COM_ANODE )
+        #if (SEG_1_CONNECTION == COM_CATHODE)
             {
-                DIO_voidSetPin(SEG1_COM_PIN, LOW);
+                DIO_voidSetPin(SEG1_COM_PIN, HIGH);
             }
             #else
             {
-                DIO_voidSetPin(SEG1_COM_PIN, HIGH);
+                DIO_voidSetPin(SEG1_COM_PIN, LOW);
             }
             #endif
             
@@ -584,10 +585,10 @@ void SEVSEG_voidEnable(u8 seg_num)
 
 void SEVSEG_voidDisable(u8 seg_num)
 {
-    switch (seg_num)
-    {
+switch (seg_num)
+{
     case SEG0:
-        #if (SEG_0_CONNECTION == COM_ANODE )
+        #if (SEG_0_CONNECTION == COM_CATHODE )
         {
             DIO_voidSetPin(SEG0_COM_PIN, LOW);
         }
@@ -599,20 +600,19 @@ void SEVSEG_voidDisable(u8 seg_num)
         
         break;
     case SEG1:
-        #if (SEG_1_CONNECTION == COM_ANODE )
-            {
-                DIO_voidSetPin(SEG1_COM_PIN, LOW);
-            }
-            #else
-            {
-                DIO_voidSetPin(SEG1_COM_PIN, HIGH);
-            }
-            #endif
-            
-            break;
+        #if (SEG_1_CONNECTION == COM_CATHODE )
+		{
+			DIO_voidSetPin(SEG1_COM_PIN, LOW);
+		}
+		#else
+		{
+			DIO_voidSetPin(SEG1_COM_PIN, HIGH);
+		}
+		#endif
+		break;
     
     default:
         break;
-    }    
+}
 
 }

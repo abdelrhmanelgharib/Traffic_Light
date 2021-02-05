@@ -16,7 +16,7 @@
 #define LED_0_CONNECTION    FORWARD
 #define LED_0_PIN           PIN17   //GREEN
 
-#define LED_1_CONNECTION    REVERSE
+#define LED_1_CONNECTION    FORWARD
 #define LED_1_PIN           PIN16   //RED
 
 #define LED_2_CONNECTION    FORWARD

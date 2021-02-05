@@ -8,7 +8,6 @@
 
 u8 SWITCH_u8GetState(u8 switch_num);
 
-void SWITCH_voidEmergency(void);
 
 
 
