@@ -25,6 +25,7 @@ int main()
 
 
     SEVSEG_voidEnable(SEG0);
+    SEVSEG_voidDisable(SEG1);
 
 
     while(1)
