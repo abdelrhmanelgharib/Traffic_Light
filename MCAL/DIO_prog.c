@@ -120,5 +120,12 @@ u8 DIO_u8GetPin(u8 pin_num)
     {
         /* do nothing */
     }
-    return ret;
+    if (ret == HIGH)
+    {
+        return HIGH;
+    }
+    else
+    {
+        return LOW;
+    }
 }
