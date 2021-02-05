@@ -3,10 +3,10 @@
  *  Created on: 1/2/2021
  */
 
-
-#include "STD_Types.h"
-#include "Bit_Math.h"
 #include "avr/io.h"
+
+#include "../LIB/STD_Types.h"     
+#include "../LIB/Bit_Math.h"
 #include "DIO_priv.h"
 #include "DIO_config.h"
 #include "Dio_int.h"
