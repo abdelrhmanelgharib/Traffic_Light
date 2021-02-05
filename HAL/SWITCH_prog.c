@@ -7,10 +7,9 @@
 #include "avr/io.h"
 #include "avr/delay.h"
 
-#include "STD_Types.h"
-#include "Bit_Math.h"
-
-#include "DIO_int.h"
+#include "../LIB/STD_Types.h"     
+#include "../LIB/Bit_Math.h"
+#include "../MCAL/DIO_int.h"
 #include "SWITCH_prev.h"
 #include "SWITCH_config.h"
 #include "SWITCH_int.h"
