@@ -7,12 +7,12 @@
 #include "avr/io.h"
 #include "avr/delay.h"
 
-#include "STD_Types.h"
-#include "Bit_Math.h"
-#include "DIO_int.h"
-#include "LED_int.h"
-#include "SWITCH_int.h"
-#include "SEVSEG_int.h"
+#include "../LIB/STD_Types.h"     
+#include "../LIB/Bit_Math.h"
+#include "../MCAL/DIO_int.h"
+#include "../HAL/LED_int.h"
+#include "../HAL/SWITCH_int.h"
+#include "../HAL/SEVSEG_int.h"
 #include "Traffic_Light_int.h"
 
 
