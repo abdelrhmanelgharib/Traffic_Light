@@ -4,13 +4,13 @@
  */
 
 
-#include "../LIB/STD_Types.h"     
-#include "../LIB/Bit_Math.h"
+
+#include "../UTIL/STD_Types.h"
+#include "../UTIL/BIT_Math.h"
 #include "../MCAL/DIO_int.h"
 #include "LED_priv.h"
 #include "LED_config.h"
 #include "LED_int.h"
-
 
 
 

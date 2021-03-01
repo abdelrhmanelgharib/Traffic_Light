@@ -7,8 +7,8 @@
 #include "avr/io.h"
 #include "avr/delay.h"
 
-#include "../LIB/STD_Types.h"     
-#include "../LIB/Bit_Math.h"
+#include "../UTIL/STD_Types.h"
+#include "../UTIL/BIT_Math.h"
 #include "../MCAL/DIO_int.h"
 #include "SWITCH_prev.h"
 #include "SWITCH_config.h"
@@ -20,9 +20,11 @@
 
 
 
+
+
 u8 SWITCH_u8GetState(u8 switch_num)
 {
-    u8 x;
+    u8 x, ret;
 
     if (switch_num == SWITCH0)
     {
@@ -31,11 +33,11 @@ u8 SWITCH_u8GetState(u8 switch_num)
             x=DIO_u8GetPin(SWITCH_0_PIN);
             if (x == HIGH)
             {
-                return NOT_PRESSED;   
+                ret= NOT_PRESSED;
             }
             else
             {
-                return PRESSED;
+                ret= PRESSED;
             }
             
         }
@@ -44,11 +46,11 @@ u8 SWITCH_u8GetState(u8 switch_num)
             x=DIO_u8GetPin(SWITCH_0_PIN);
             if (x == HIGH)
             {
-                return PRESSED;   
+                ret= PRESSED;
             }
             else
             {
-                return NOT_PRESSED;
+                ret= NOT_PRESSED;
             }
         }
         #endif
@@ -60,11 +62,11 @@ u8 SWITCH_u8GetState(u8 switch_num)
             x=DIO_u8GetPin(SWITCH_1_PIN);
             if (x == HIGH)
             {
-                return NOT_PRESSED;   
+                ret= NOT_PRESSED;
             }
             else
             {
-                return PRESSED;
+                ret= PRESSED;
             }
             
         }
@@ -73,14 +75,15 @@ u8 SWITCH_u8GetState(u8 switch_num)
             x=DIO_u8GetPin(SWITCH_1_PIN);
             if (x == HIGH)
             {
-                return PRESSED;   
+                ret= PRESSED;
             }
             else
             {
-                return NOT_PRESSED;
+                ret= NOT_PRESSED;
             }
         }
         #endif
     }
+    return ret;
     
 }

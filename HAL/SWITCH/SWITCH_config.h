@@ -14,9 +14,9 @@
  */
 
 #define SWITCH_0_CONNECTION     PULLUP
-#define SWITCH_0_PIN            PIN28
+#define SWITCH_0_PIN            PIN26
 
 #define SWITCH_1_CONNECTION     PULLUP
-#define SWITCH_1_PIN            PIN31
+#define SWITCH_1_PIN            PIN27
 
 #endif  /* SWITCH_CONFIG_H_ */
