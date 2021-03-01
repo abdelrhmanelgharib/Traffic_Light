@@ -10,10 +10,10 @@
 #include "../LIB/STD_Types.h"     
 #include "../LIB/Bit_Math.h"
 #include "../MCAL/DIO_int.h"
-#include "../HAL/LED_int.h"
-#include "../HAL/SWITCH_int.h"
-#include "../HAL/SEVSEG_int.h"
-#include "Traffic_Light_int.h"
+#include "../HAL/LED/LED_int.h"
+#include "../HAL/SWITCH/SWITCH_int.h"
+#include "../HAL/SEVSEG/SEVSEG_int.h"
+#include "../SERVICE/Traffic_Light_int.h"
 
 
 

@@ -3,9 +3,9 @@
  *  Created on: 2/2/2021
  */
 
-#include "../UTIL/STD_Types.h"
-#include "../UTIL/BIT_Math.h"
-#include "../MCAL/DIO_int.h"
+#include "../../LIB/STD_Types.h"
+#include "../../LIB/BIT_Math.h"
+#include "../../MCAL/DIO_int.h"
 
 #include "SEVSEG_priv.h"
 #include "SEVSEG_config.h"

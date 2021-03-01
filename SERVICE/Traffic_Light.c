@@ -1,19 +1,13 @@
-/*
- *  Author: El-Gharib
- *  Created on: 4/2/2021
- */
-
 #include "avr/io.h"
 #include "avr/delay.h"
 
-#include "../LIB/STD_Types.h"     
-#include "../LIB/Bit_Math.h"
+#include "../LIB/STD_Types.h"
+#include "../LIB/BIT_Math.h"
 #include "../MCAL/DIO_int.h"
-#include "../HAL/LED_int.h"
-#include "../HAL/SWITCH_int.h"
-#include "../HAL/SEVSEG_int.h"
+#include "../HAL/LED/LED_int.h"
+#include "../HAL/SWITCH/SWITCH_int.h"
+#include "../HAL/SEVSEG/SEVSEG_int.h"
 #include "Traffic_Light_int.h"
-
 
 
 void SEVSEG_voidPov(void)
